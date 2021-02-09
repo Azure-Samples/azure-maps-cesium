@@ -60,7 +60,7 @@ Currently supports raster (i.e PNG) tiles, support for vector tiles is being inv
 
 Download the project and copy the `azure-maps-cesium` JavaScript file from the `dist` folder into your project.
 
-See the [documentation](https://github.com/Azure-Samples/azure-maps-cesium/tree/main/docs) for more details on a specific feature or take a look at one of the samples below.
+See the [documentation](https://github.com/Azure-Samples/azure-maps-cesium/blob/main/docs/APIReference.md) for more details on a specific feature or take a look at one of the samples below.
 
 **Usage**
 
