@@ -158,8 +158,8 @@ This Cesium plugin makes it easy to add Azure Maps imagery providers using any o
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Add references to the CesiumJS Map control JavaScript and CSS files. -->
-    <link rel="stylesheet" href="https://cesiumjs.org/releases/1.18/Build/Cesium/Widgets/widgets.css" type="text/css" />
-    <script src="https://cesiumjs.org/releases/1.44/Build/Cesium/Cesium.js"></script>
+    <link rel="stylesheet" href="https://cesiumjs.org/releases/1.77/Build/Cesium/Widgets/widgets.css" type="text/css" />
+    <script src="https://cesiumjs.org/releases/1.77/Build/Cesium/Cesium.js"></script>
 
     <script type='text/javascript'>
         var map;
