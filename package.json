@@ -1,7 +1,7 @@
 {
   "name": "azure-maps-cesium",
   "version": "0.0.1",
-  "description": "A Cesium JS plugin that makes it easy to overlay tile layers from the Azure Maps tile services.",
+  "description": "A Cesium JS plugin that makes it easy to integrate Azure Maps services such as tile layers and geocoding services.",
   "keywords": [
     "azure",
     "maps",
