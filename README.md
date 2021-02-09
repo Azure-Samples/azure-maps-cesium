@@ -11,8 +11,6 @@ products:
 
 # Azure Maps Cesium JS plugin
 
-A [Cesium JS](https://cesium.com/cesiumjs/) plugin that makes it easy to overlay tile layers from the [Azure Maps tile services](https://docs.microsoft.com/rest/api/maps/renderv2/getmaptilepreview).
-
 A [Cesium JS](https://cesium.com/cesiumjs/) plugin that makes it easy to integrate Azure Maps services such as [tile layers](https://docs.microsoft.com/rest/api/maps/renderv2/getmaptilepreview) and [geocoding services](https://docs.microsoft.com/en-us/rest/api/maps/search).
 
 **Features:**
