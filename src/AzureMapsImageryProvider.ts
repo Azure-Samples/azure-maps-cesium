@@ -101,7 +101,7 @@ export class AzureMapsImageryProvider extends UrlTemplateImageryProvider {
 
         Object.keys(td).forEach(tilesetId => {
             const ts = td[tilesetId];
-            if(ts && !ts.isBasemap) {
+            if (ts && !ts.isBasemap) {
                 pvm.push(AzureMapsImageryProvider.getImageryLayer(Object.assign({}, azMapsOptions, {
                     tilesetId: tilesetId
                 }), layerOptions));
@@ -122,8 +122,8 @@ export class AzureMapsImageryProvider extends UrlTemplateImageryProvider {
 
             const info = Constants.TILESETS[options.tilesetId];
 
-            if(info){
-                const name = ((typeof prependAzureMaps === 'boolean' && prependAzureMaps)? 'Azure Maps ' : '') + info.name;
+            if (info) {
+                const name = ((typeof prependAzureMaps === 'boolean' && prependAzureMaps) ? 'Azure Maps ' : '') + info.name;
 
                 return new ProviderViewModel({
                     name: name,
@@ -146,11 +146,11 @@ export class AzureMapsImageryProvider extends UrlTemplateImageryProvider {
      */
     public static getBaseMapProviderViewModels(options: AzureMapsImageryProviderOptions, prependAzureMaps?: boolean): ProviderViewModel[] {
         const pvm = [];
-        const td =  Constants.TILESETS;
+        const td = Constants.TILESETS;
 
         Object.keys(td).forEach(tilesetId => {
             const ts = td[tilesetId];
-            if(ts && ts.isBasemap) {
+            if (ts && ts.isBasemap) {
                 pvm.push(AzureMapsImageryProvider.getProviderViewModel(Object.assign({}, options, {
                     tilesetId: tilesetId
                 }), prependAzureMaps));
@@ -232,8 +232,8 @@ export class AzureMapsImageryProvider extends UrlTemplateImageryProvider {
      * Gets the display name for the tilesetId of the imagery provider.
      */
     public getDisplayName(): string {
-        const ts = Constants.TILESETS[this._options.tilesetId];
-        return  (ts)? ts.name: null;
+        const ts = this._options.tilesetId ? Constants.TILESETS[this._options.tilesetId] : null;
+        return (ts) ? ts.name : null;
     }
 
     /** Gets the geopolitical view setting of the layer. */
@@ -268,7 +268,7 @@ export class AzureMapsImageryProvider extends UrlTemplateImageryProvider {
     /************************
     * Private functions
     ***********************/
-    
+
     /**
      * Sets the tileset ID of the layer.
      * @param tilesetId The tileset to change to.
@@ -279,10 +279,12 @@ export class AzureMapsImageryProvider extends UrlTemplateImageryProvider {
 
         self._baseUrl = _renderV2TileUrl;
 
-        if (tilesetId.startsWith('microsoft.traffic.flow')) {
-            self._baseUrl = _trafficFlowTileUrl;
-        } else if (tilesetId.startsWith('microsoft.traffic.incident')) {
-            self._baseUrl = _trafficIncidentTileUrl;
+        if (tilesetId) {
+            if (tilesetId.startsWith('microsoft.traffic.flow')) {
+                self._baseUrl = _trafficFlowTileUrl;
+            } else if (tilesetId.startsWith('microsoft.traffic.incident')) {
+                self._baseUrl = _trafficIncidentTileUrl;
+            }
         }
 
         self._refresh();
@@ -302,13 +304,13 @@ export class AzureMapsImageryProvider extends UrlTemplateImageryProvider {
 
     private _refresh(): void {
         const self = this;
-        var info =  Constants.TILESETS[self._options.tilesetId];
+        var info = self._options.tilesetId ? Constants.TILESETS[self._options.tilesetId] : null;
 
-        if(!info){
+        if (!info) {
             info = {
                 name: '',
                 maxZoom: 22,
-                hasAlpha: true 
+                hasAlpha: true
             };
         }
         super.reinitialize({
@@ -331,11 +333,11 @@ export class AzureMapsImageryProvider extends UrlTemplateImageryProvider {
             .replace('{view}', opt.view)
             .replace('{tilesetId}', opt.tilesetId);
 
-        if (opt.tilesetId.startsWith('microsoft.traffic')) {
+        if (opt.tilesetId && opt.tilesetId.startsWith('microsoft.traffic')) {
             url = url.replace('{style}', self._getTrafficStyle());
 
-            if(opt.tilesetId.indexOf('flow') > 0) {
-                url +=  '&thickness=' + self._options.trafficFlowThickness;
+            if (opt.tilesetId.indexOf('flow') > 0) {
+                url += '&thickness=' + self._options.trafficFlowThickness;
             }
         }
 
@@ -357,7 +359,7 @@ export class AzureMapsImageryProvider extends UrlTemplateImageryProvider {
     private _getTrafficStyle(): string {
         const ts = this._options.tilesetId;
 
-        if(ts.indexOf('microsoft.traffic.')> -1){
+        if (ts && ts.indexOf('microsoft.traffic.') > -1) {
             return ts.replace('microsoft.traffic.incident.', '').replace('microsoft.traffic.flow.', '');
         }
 

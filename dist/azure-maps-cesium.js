@@ -2735,7 +2735,7 @@ MIT License
          * Gets the display name for the tilesetId of the imagery provider.
          */
         AzureMapsImageryProvider.prototype.getDisplayName = function () {
-            var ts = Constants.TILESETS[this._options.tilesetId];
+            var ts = this._options.tilesetId ? Constants.TILESETS[this._options.tilesetId] : null;
             return (ts) ? ts.name : null;
         };
         /** Gets the geopolitical view setting of the layer. */
@@ -2773,11 +2773,13 @@ MIT License
             var self = this;
             self._options.tilesetId = tilesetId;
             self._baseUrl = _renderV2TileUrl;
-            if (tilesetId.startsWith('microsoft.traffic.flow')) {
-                self._baseUrl = _trafficFlowTileUrl;
-            }
-            else if (tilesetId.startsWith('microsoft.traffic.incident')) {
-                self._baseUrl = _trafficIncidentTileUrl;
+            if (tilesetId) {
+                if (tilesetId.startsWith('microsoft.traffic.flow')) {
+                    self._baseUrl = _trafficFlowTileUrl;
+                }
+                else if (tilesetId.startsWith('microsoft.traffic.incident')) {
+                    self._baseUrl = _trafficIncidentTileUrl;
+                }
             }
             self._refresh();
         };
@@ -2794,7 +2796,7 @@ MIT License
         };
         AzureMapsImageryProvider.prototype._refresh = function () {
             var self = this;
-            var info = Constants.TILESETS[self._options.tilesetId];
+            var info = self._options.tilesetId ? Constants.TILESETS[self._options.tilesetId] : null;
             if (!info) {
                 info = {
                     name: '',
@@ -2819,7 +2821,7 @@ MIT License
                 .replace('{language}', opt.language)
                 .replace('{view}', opt.view)
                 .replace('{tilesetId}', opt.tilesetId);
-            if (opt.tilesetId.startsWith('microsoft.traffic')) {
+            if (opt.tilesetId && opt.tilesetId.startsWith('microsoft.traffic')) {
                 url = url.replace('{style}', self._getTrafficStyle());
                 if (opt.tilesetId.indexOf('flow') > 0) {
                     url += '&thickness=' + self._options.trafficFlowThickness;
@@ -2838,7 +2840,7 @@ MIT License
         };
         AzureMapsImageryProvider.prototype._getTrafficStyle = function () {
             var ts = this._options.tilesetId;
-            if (ts.indexOf('microsoft.traffic.') > -1) {
+            if (ts && ts.indexOf('microsoft.traffic.') > -1) {
                 return ts.replace('microsoft.traffic.incident.', '').replace('microsoft.traffic.flow.', '');
             }
             return null;
