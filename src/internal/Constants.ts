@@ -34,6 +34,7 @@ export const Constants = {
     DEFAULT_DOMAIN: 'https://atlas.microsoft.com/',
     SDK_VERSION: '0.0.1',
     TARGET_SDK: 'Cesium',
+    RENDERV2_VERSION: '2.1',
     TILESETS: <Record<string, TilesetInfo>>{
         'microsoft.base.road': {
             name: 'Road',

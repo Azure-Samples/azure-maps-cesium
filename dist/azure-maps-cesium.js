@@ -2050,6 +2050,7 @@ MIT License
         DEFAULT_DOMAIN: 'https://atlas.microsoft.com/',
         SDK_VERSION: '0.0.1',
         TARGET_SDK: 'Cesium',
+        RENDERV2_VERSION: '2.1',
         TILESETS: {
             'microsoft.base.road': {
                 name: 'Road',
@@ -2552,7 +2553,7 @@ MIT License
         return AuthenticationManager;
     }());
 
-    var _renderV2TileUrl = 'https://{azMapsDomain}/map/tile?api-version=2.0&tilesetId={tilesetId}&zoom={z}&x={x}&y={y}&tileSize={tileSize}&language={language}&view={view}';
+    var _renderV2TileUrl = "https://{azMapsDomain}/map/tile?api-version=" + Constants.RENDERV2_VERSION + "&tilesetId={tilesetId}&zoom={z}&x={x}&y={y}&tileSize={tileSize}&language={language}&view={view}";
     var _trafficFlowTileUrl = 'https://{azMapsDomain}/traffic/flow/tile/png?api-version=1.0&style={style}&zoom={z}&x={x}&y={y}';
     var _trafficIncidentTileUrl = 'https://{azMapsDomain}/traffic/incident/tile/png?api-version=1.0&style={style}&zoom={z}&x={x}&y={y}';
     /**
@@ -2690,7 +2691,7 @@ MIT License
                     partner = 'AccuWeather';
                 }
                 else if (ts === 'microsoft.imagery') {
-                    partner = 'DigitalGlobe';
+                    partner = 'Airbus';
                 }
                 if (partner) {
                     return [new Cesium.Credit("\u00A9 " + new Date().getFullYear() + " " + partner, true), new Cesium.Credit('Microsoft', true)];
