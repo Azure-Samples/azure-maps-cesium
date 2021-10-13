@@ -173,7 +173,7 @@ This Cesium plugin makes it easy to add Azure Maps imagery providers using any o
                         tileHeight: 512,
                         queryParameters: {
                             //Add your Azure Maps key to the map SDK. Get an Azure Maps key at https://azure.com/maps. NOTE: The primary key should be used as the key.
-                            'subscription-key': '<Your Azure Maps Key>' 
+                            'subscription-key': '<Your Azure Maps Key>',
 
                             /*
                                 Tileset ID specifies which data layers to render in the tiles. Can be:
