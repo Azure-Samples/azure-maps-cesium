@@ -48,13 +48,13 @@ Currently supports raster (i.e PNG) tiles, support for vector tiles is being inv
 **Samples**
 
 [Render Azure Maps in Cesium](https://azuremapscodesamples.azurewebsites.net/index.html?sample=Render%20Azure%20Maps%20in%20Cesium)
-<br/>[<img src="https://github.com/Azure-Samples/AzureMapsCodeSamples/raw/master/AzureMapsCodeSamples/SiteResources/screenshots/Render-Azure-Maps-in-Cesium.jpg" height="200px">](https://azuremapscodesamples.azurewebsites.net/index.html?sample=Render%20Azure%20Maps%20in%20Cesium)
+<br/>[<img src="https://github.com/Azure-Samples/AzureMapsCodeSamples/raw/master/Samples/Third%20Party%20Map%20Controls/Render%20Azure%20Maps%20in%20Cesium/screenshot.jpg" height="200px">](https://azuremapscodesamples.azurewebsites.net/index.html?sample=Render%20Azure%20Maps%20in%20Cesium)
 
 [Show Azure Maps in Cesium BaseLayerPicker](https://azuremapscodesamples.azurewebsites.net/index.html?sample=Show%20Azure%20Maps%20in%20Cesium%20BaseLayerPicker)
-<br/>[<img src="https://github.com/Azure-Samples/AzureMapsCodeSamples/raw/master/AzureMapsCodeSamples/SiteResources/screenshots/Show-Azure-Maps-in-Cesium-BaseLayerPicker.jpg" height="200px">](https://azuremapscodesamples.azurewebsites.net/index.html?sample=Show%20Azure%20Maps%20in%20Cesium%20BaseLayerPicker)
+<br/>[<img src="https://github.com/Azure-Samples/AzureMapsCodeSamples/raw/master/Samples/Third%20Party%20Map%20Controls/Show%20Azure%20Maps%20in%20Cesium%20BaseLayerPicker/screenshot.jpg" height="200px">](https://azuremapscodesamples.azurewebsites.net/index.html?sample=Show%20Azure%20Maps%20in%20Cesium%20BaseLayerPicker)
 
 [Azure Maps Cesium options](https://azuremapscodesamples.azurewebsites.net/index.html?sample=Azure%20Maps%20Cesium%20options)
-<br/>[<img src="https://github.com/Azure-Samples/AzureMapsCodeSamples/raw/master/AzureMapsCodeSamples/SiteResources/screenshots/Azure-Maps-Cesium-options.jpg" height="200px">](https://azuremapscodesamples.azurewebsites.net/index.html?sample=Azure%20Maps%20Cesium%20options)
+<br/>[<img src="https://github.com/Azure-Samples/AzureMapsCodeSamples/raw/master/Samples/Third%20Party%20Map%20Controls/Azure%20Maps%20Cesium%20options/screenshot.jpg" height="200px">](https://azuremapscodesamples.azurewebsites.net/index.html?sample=Azure%20Maps%20Cesium%20options)
 
 ## Getting started
 
