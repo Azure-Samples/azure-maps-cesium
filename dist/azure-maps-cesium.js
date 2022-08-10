@@ -1,4 +1,6 @@
 /*
+azure-maps-cesium Version: 0.0.3
+
 MIT License
 
     Copyright (c) Microsoft Corporation.
