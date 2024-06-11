@@ -1,6 +1,6 @@
 {
   "name": "azure-maps-cesium",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Cesium JS plugin that makes it easy to integrate Azure Maps services such as tile layers and geocoding services.",
   "keywords": [
     "azure",
@@ -30,7 +30,7 @@
     "adal-angular": "^1.0.18",
     "fs-extra": "^7.0.1",
     "lodash": "^4.17.21",
-    "mocha": "^7.1.1",
+    "mocha": "^10.4.0",
     "mocha-parallel-tests": "^2.3.0",
     "puppeteer": "^2.1.1",
     "rollup": "^1.32.1",
